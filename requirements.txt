@@ -1,0 +1,8 @@
+openai-whisper
+pyannote.audio
+torch
+pydub
+moviepy
+requests
+PyGithub
+python-dateutil

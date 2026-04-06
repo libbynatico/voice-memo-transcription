@@ -1,0 +1,19 @@
+{
+  "repository": {
+    "name": "voice-memo-transcription",
+    "owner": "libbynatico",
+    "visibility": "private",
+    "description": "Free, automated iOS voice memo transcription with speaker identification and SLP analysis"
+  },
+  "automation": {
+    "batch_transcription": true,
+    "speaker_diarization": true,
+    "slp_analysis": true,
+    "github_sync": true
+  },
+  "privacy": {
+    "store_raw_audio": false,
+    "transcripts_encrypted": false,
+    "medical_data": true
+  }
+}
