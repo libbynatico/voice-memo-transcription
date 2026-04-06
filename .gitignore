@@ -1,0 +1,36 @@
+# Input audio files (never sync raw recordings to GitHub)
+input/
+*.m4a
+*.wav
+*.mp3
+*.aac
+
+# Cache and temporary files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.cache/
+*.egg-info/
+
+# System files
+.DS_Store
+.env
+.env.local
+*.swp
+*~
+
+# Logs
+logs/
+*.log
+
+# Authentication tokens (never commit tokens)
+.github_token
+github_token.txt
+config/secrets.json
+
+# Output cache (keep local, sync to GitHub separately)
+output/*.tmp
+output/cache/
+

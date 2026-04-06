@@ -1,0 +1,60 @@
+{
+  "system": "Voice Memo Transcription & SLP Analysis",
+  "version": "1.0",
+  "created": "2026-04-06",
+  "purpose": "Batch transcribe iOS voice memos with speaker identification, speech pathology analysis, and GitHub automation",
+  "cost": "$0 - Uses free Whisper AI and open-source tools",
+  "github_repo": "https://github.com/libbynatico/voice-memo-transcription",
+  "for_user": "Matthew Herbert",
+  "contents": {
+    "scripts": {
+      "batch_transcribe.py": "Main transcription pipeline with speaker diarization",
+      "slp_analyzer.py": "Speech-Language Pathology analysis module",
+      "push_to_github.py": "GitHub automation and backup",
+      "setup_cron.py": "Monthly automatic update scheduler"
+    },
+    "docs": {
+      "README.md": "Complete documentation and setup guide",
+      "QUICKSTART.md": "Fast start (5 steps to first run)",
+      "MANIFEST.json": "This file - system inventory"
+    },
+    "input": "Place your .m4a voice memos here (auto-ignored from GitHub)",
+    "output": "Generated transcripts, analysis, and index files",
+    "logs": "Cron job logs and processing records"
+  },
+  "features": {
+    "transcription": {
+      "engine": "OpenAI Whisper (free)",
+      "input_formats": [".m4a", ".wav", ".mp3", ".aac"],
+      "accuracy": "High (95%+ for clear audio)",
+      "languages": "All languages supported"
+    },
+    "speaker_identification": {
+      "engine": "pyannote.audio (free)",
+      "capability": "Identifies different speakers automatically",
+      "accuracy": "High for 2-4 speakers, varies with audio quality"
+    },
+    "slp_analysis": {
+      "prosody": "Rate, rhythm, intonation, filled pauses",
+      "intelligibility": "Speech clarity and articulation markers",
+      "fatigue": "Voice changes, effort indicators",
+      "tbi_patterns": "Word retrieval, fluency, coherence",
+      "cognitive": "Sentence complexity, vocabulary diversity"
+    }
+  },
+  "quick_start": [
+    "1. pip install -r requirements.txt",
+    "2. Export voice memos from iPhone to input/ folder",
+    "3. python scripts/batch_transcribe.py",
+    "4. Review output/ folder",
+    "5. python scripts/push_to_github.py --repo libbynatico/voice-memo-transcription --token YOUR_TOKEN"
+  ],
+  "output_structure": {
+    "transcripts": "Raw transcripts with speaker labels",
+    "analysis": "SLP analysis JSON files",
+    "metadata": "Speaker profiles and diarization data",
+    "index.json": "Searchable index of all memos"
+  },
+  "privacy": "All data is private. Use private GitHub repo. Audio files never synced.",
+  "support": "Full documentation in README.md and QUICKSTART.md"
+}
